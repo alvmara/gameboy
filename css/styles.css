@@ -1,0 +1,167 @@
+:root {
+    --gameboy-color: blue;
+    --gameboy-marco-alto: 60px;
+}
+
+body {
+    background-color: rgb(207, 191, 191);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.gameboy {
+    height: 30em;
+    aspect-ratio: 9 / 16;
+    background-color: var(--gameboy-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 15px 15px 150px 150px / 15px 15px 30px 30px;
+}
+
+.marco {
+    background-color: black;
+    height: 10em;
+    padding: 30px 40px var(--gameboy-marco-alto) 40px;
+    border-radius: 15px 15px 50% 50% / 15px 15px 20px 20px;
+    position: relative;
+}
+
+.pantalla {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.gameboy > .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.joystick {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.joystick > div {
+    aspect-ratio: 1;
+    height: 26px;
+    position: absolute;
+    background-color: black;
+}
+
+.joystick .up {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.joystick .down {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.joystick .left {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+}
+
+.joystick .right {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.joystick .center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ab {
+    display: flex;
+    width: 100px;
+    height: 100px;
+
+    align-items: center;
+    justify-content: space-around;
+    transform: rotate(-15deg);
+}
+
+.ab > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:rgb(24, 19, 19);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.1);
+    transform: rotate(15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboy > .bottom {
+    margin-top: auto;
+    margin-bottom: 35px;
+}
+
+
+.bottom .buttons > div {
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.bottom .buttons > p {
+    font-size: 10px;
+}
+
+.bottom .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gameboy-text {
+    color: white;
+    position: absolute;
+    bottom: calc(var(--gameboy-marco-alto) / 2);
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: fit-content;
+
+    letter-spacing: -1px;
+}
+
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green2 {
+    color: greenyellow;
+}
